@@ -68,7 +68,7 @@ def xgboost_cv():
     sub_user_index, sub_trainning_date, sub_label = make_train_set(sub_start_date, sub_end_date,
                                                                    sub_test_start_date, sub_test_end_date)
     test = xgb.DMatrix(sub_trainning_date)
-    #y = bst.predict(test)
+    y = bst.predict(test)
 
     pred = sub_user_index.copy()
     y_true = sub_user_index.copy()
